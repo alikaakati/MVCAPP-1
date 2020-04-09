@@ -1,0 +1,29 @@
+﻿@model WebApplication1.ViewModel.List2ViewModel
+@{
+    ViewBag.Title = "Index";
+}
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+
+
+        @foreach (var customer in Model.ListOfCustomers)
+        {
+            <tr>
+                <td><a href="/Customers/Details/@customer.customerID">@customer.customerID</a></td>
+                <td>@customer.name</td>
+
+            </tr>
+
+        }
+    </tbody>
+</table>
+
+
+<h2>Index</h2>
+
